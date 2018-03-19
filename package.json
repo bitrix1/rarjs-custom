@@ -26,6 +26,10 @@
   "author": {
     "name": "43081j"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bitrix1/rarjs-custom.git"
+  },
   "bugs": {
     "url": "https://github.com/43081j/rar.js/issues"
   },
