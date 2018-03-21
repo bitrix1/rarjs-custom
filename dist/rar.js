@@ -565,6 +565,7 @@
 	 * Get a file
 	 */
 	RarArchive.prototype.get = function(entry, callback) {
+        var self = this;
 		console.log("RarArchive.prototype.get = function(entry, callback)",  entry)
 		if(!this.valid) {
 			if(callback) callback.call(this, 'Invalid RAR archive');
@@ -595,12 +596,13 @@
 	if(typeof module !== 'undefined' && module.exports) {
 		module.exports = RarArchive;
 	} else {
-		if(typeof define === 'function' && define.amd) {
-			define('rar', [], function() {
-				return RarArchive;
-			});
-		} else {
-			window.RarArchive = RarArchive;
-		}
+		throw new Error('Not init modele rarjs!');
+		// if(typeof define === 'function' && define.amd) {
+		// 	define('rar', [], function() {
+		// 		return RarArchive;
+		// 	});
+		// } else {
+		// 	window.RarArchive = RarArchive;
+		// }
 	}
 })();
